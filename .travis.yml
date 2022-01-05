@@ -1,0 +1,18 @@
+language: ruby
+cache:
+- bundler
+before_script:
+- bundle exec rake db:create
+- bundle exec rake db:migrate
+- bundle exec rake assets:precompile
+deploy:
+  provider: heroku
+  api_key:
+    secure: oEXhXiLIsLIqU353rbz9+d+pZ2AKVDBUNZUv5CLrwuM0H12/ozmGRQy65rpy11/+xhVO8kqKvqXCGf4vvU8FH0NBPDrQQaoEhmDHM1dfZDLOBO+HyPuqGw4pDZ39S5GUv155gUMO6M7rNhFjbliVp0kZ/bH5mB02oYLs4gsR0lvVvLpxJQW80J5DqD0MYKyqgQlXWfsq+fY9e/Y8TF8YnkmoT/0+cgFxdcrvl15D9YGt+P3XVNT0VHNg5GyikAqY8Bkx/zdH8AtY3Qz8VTleYxBNZ+iJCFRqu+zwsiuiH1N3YQpFMmTxpaQxCrW+v5Uzi0sdtaHWIJ+k2pt8hRwc2UW9DM3Y1+EmnjjuQJbq9IQbuIqrlNaP/cWNa4NTPKaLCFkf3EohGGJeA5b7dOIrnU0c0D/q1+n/DY5Dw+sr7fd3pr+SC/3ZerWwocyecHtSvWe6gOtYCnub0xAYsZAOg5h5f3OO9ZYCk0MNWLU3TibyL9OFDP0w8S2+7IR6cCc3P0qaO0TV+uxadwzzjGR6CLwDlWUCMKztAqC1PYKV5p6o6biPdsGrzr/JV2fOaRHHQbCWSb6zeC3Av9YJ55pykG5DSevj9KuaQusF1FvMigElhdEBvdPayTfRnjsoX4pvojNr5nXjrWSfla4Kqbno1AaluaPhaSO2UU4n7EGpsOw=
+  app: shielded-anchorage-65791
+  on:
+    repo: samueldevine/bragging-rights-fe
+rvm:
+- 2.7.2
+services:
+- postgresql
