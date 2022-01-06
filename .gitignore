@@ -27,3 +27,6 @@
 /config/master.key
 
 /Gemfile.lock
+
+# Ignore application configuration
+/config/application.yml
