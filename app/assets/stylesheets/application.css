@@ -13,11 +13,3 @@
  *= require_tree .
  *= require_self
  */
-body  {
-  background-image: url('comic_background.jpeg');
-  background-color: #cccccc;
-}
-
-/* div.col-sm-4 {
-  background_color: white;
-} */
