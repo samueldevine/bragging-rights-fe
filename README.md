@@ -1,16 +1,18 @@
-<center>
-![Imgur](https://i.imgur.com/lq0RgRC.png)
+<!-- ![Imgur](https://i.imgur.com/lq0RgRC.png) -->
+<img style="float: center;" src="https://i.imgur.com/lq0RgRC.png">
 
 A Comic Trivia Challenge (2 week sprint)
 ----------------------------------------
 ### Chaz Simons, Sam Devine, Matthew Kimball, Ted Staros & Christian Valesares
 
-![CircleCI](https://img.shields.io/circleci/build/github/samueldevine/bragging-rights-be/main)
-![Ruby](https://img.shields.io/badge/Ruby-v2.7.2-red)
-![Rails](https://img.shields.io/badge/Rails-v5.2.6-red)
+<img style="float: center;" src="https://img.shields.io/badge/Ruby-v2.7.2-red">
+<!-- ![Ruby](https://img.shields.io/badge/Ruby-v2.7.2-red) -->
+<img style="float: center;" src="https://img.shields.io/badge/Rails-v5.2.6-red">
+<!-- ![Rails](https://img.shields.io/badge/Rails-v5.2.6-red) -->
 ---
-![Imgur](https://i.imgur.com/q7ICv3F.png)
-</center>
+<img style="float: center;" src="https://i.imgur.com/q7ICv3F.png">
+<!-- ![Imgur](https://i.imgur.com/q7ICv3F.png) -->
+
 ## Have you bragged about your comic knowledge in the past?? Put those claims to the test with this exciting quiz app!
 
 "Bragging Rights" is a trivia competition app that lets you flex that knowledge! Find out how you rank against users from your city, state or country! Users log in with Twitter, and can tweet their scores to challenge friends. 
