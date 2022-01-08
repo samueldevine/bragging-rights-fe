@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/auth/twitter/callback', to: 'users#create'
   get '/dashboard',             to: 'users#show'
   get '/logout',                to: 'users#destroy'
+  get '/leaderboard',           to: 'leaderboard#index'
 end
