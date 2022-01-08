@@ -18,13 +18,13 @@ Have you bragged about your comic knowledge in the past?? Put those claims to th
 This app is created with a service oriented architecture.
 
 ## Schema
-<img width="658" alt="Bragging Rights Shcema copy" src="https://app.dbdesigner.net/designer/schema/488102">
+<img width="658" alt="Bragging Rights Schema copy" src="https://app.dbdesigner.net/designer/schema/488102">
 
 ## Tools Used:
 - Rails 5.2.6
 - Ruby 2.7.2
 - PostgreSQL
-- Heroku (https://frozen-peak-55560.herokuapp.com)
+- Heroku (https://shielded-anchorage-65791.herokuapp.com/)
 - Twitter OAth
 - Circle CI
 
