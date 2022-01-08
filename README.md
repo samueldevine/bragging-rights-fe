@@ -46,12 +46,12 @@ Twitter login is handled by the OmniAuth-Twitter gem.
 
 ## APIs
 
-![Open Trivia Database](https://opentdb.com/)
+[Open Trivia Database](https://opentdb.com/)
 This API was utilized to populate our quiz with comic themed questions.
 
-![IP API](https://ip-api.com/)
+[IP API](https://ip-api.com/)
 Finds a user based on IP address. This allows us to store their location and compare results against other users.
 
-![Twitter API](https://developer.twitter.com/en)
+[Twitter API](https://developer.twitter.com/en)
 Used in conjunction with OmniAuth-Twitter to allow users to draft tweets about their high scores.
 <!-- Potentially add links to the APIs we are using or move the description to this section -->
