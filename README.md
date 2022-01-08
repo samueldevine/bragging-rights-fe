@@ -1,4 +1,4 @@
-[Imgur](https://i.imgur.com/UScauwh.png)
+![Imgur](https://i.imgur.com/UScauwh.png)
 
 A Comic Trivia Challenge (2 week sprint)
 ----------------------------------------
