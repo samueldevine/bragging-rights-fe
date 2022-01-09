@@ -14,6 +14,9 @@ class UsersController < ApplicationController
   end
 
   def show
+    if session[:user_id].nil?
+      session[:user_id] = User.all.first[:id]
+    end
     @user = User.find(session[:user_id])
   end
 

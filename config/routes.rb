@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   get '/dashboard',             to: 'users#show'
   get '/logout',                to: 'users#destroy'
   get '/leaderboard',           to: 'leaderboard#index'
+
+  namespace :games do
+    resources :questions, only: :show
+  end
 end
