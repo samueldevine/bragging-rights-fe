@@ -14,9 +14,33 @@
  *= require_self
  */
 body  {
-  background-image: url('comic_background.jpeg');
+  background-image: url('4806311.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: #cccccc;
 }
+
+h1 {
+  color: white;
+  text-shadow: 10px 10px 15px #000000;
+  font-family: "Marker Felt";
+  font-weight: bold;
+  font-style: italic; 
+  font-size: 150px; 
+}
+
+h3 {
+  color: white;
+  text-shadow: 10px 10px 15px #000000;
+  font-family: "Marker Felt";
+  font-weight: bold;
+  font-style: italic;
+  font-size: 75px;
+}
+
+/* div.col-sm-4 {
+  background_color: white;
+} */
 
 label.btn {
   padding: 18px 60px;
