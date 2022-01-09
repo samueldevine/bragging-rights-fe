@@ -43,14 +43,21 @@ h4 {
   text-shadow: 10px 10px 15px #000000;
   font-family: "Marker Felt";
   font-weight: bold;
-  font-style: italic; 
-  font-size: 25px; 
+  font-style: italic;
+  font-size: 25px;
 }
 
-/* div.col-sm-4 {
-  background_color: white;
-} */
+p.score {
+  color: black;
+  font-family: "Marker Felt";
+  font-style: italic;
+  font-size: 50px;
+}
 
+
+/*
+everything below this is pulled from a random website
+*/
 label.btn {
   padding: 18px 60px;
   white-space: normal;
