@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-h1
-</style>
-</head>
 <body>
 <center>
 <h1>Top Braggers!</h1>
@@ -13,9 +8,79 @@ h1
 </html>
 <style>
 div {
-  margin-top: 775px;
+  margin-top: 275px;
 }
 </style>
+
+  <div class="field">
+
+  </div>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table, th, td {
+        
+        border-radius: 5px;
+        text-align: center;
+        width: 30%;
+        margin-top: 25px;
+        padding: 8px;
+  }
+  th {
+  background-color: #ff3333;
+  color: white;
+}
+        tr:nth-child(even) {background-color: #ffffff; color: #3333ff; font-weight: bold;}
+        tr:nth-child(odd) {background-color: #3333ff; color: #ffffff;}
+      
+    </style>
+  </head>
+<body>
+<center>
+<%= form_tag("/search", method: "get") do %>
+<%= radio_button_tag(:location, "city") %>
+<%= label_tag(:city, "City") %>
+<%= radio_button_tag(:location, "state") %>
+<%= label_tag(:state, "State") %>
+<%= radio_button_tag(:location, "country") %>
+<%= label_tag(:country, "Country") %>
+<%= radio_button_tag(:location, "world") %>
+<%= label_tag(:world, "World") %>
+<% end %>
+</div>
+
+  <table>
+    <tr>
+      <th>User</th>
+      <th>Score</th>
+    </tr>
+    <tr>
+      <td><%= "Peter" %></td>
+      <td>1500</td>
+    </tr>
+    <tr>
+      <td>Lois</td>
+      <td>1300</td>
+    </tr>
+    <tr>
+      <td>Chris</td>
+      <td>1200</td>
+    </tr>
+    <tr>
+      <td>Brian</td>
+      <td>1150</td>
+    </tr>
+    <tr>
+      <td>meg</td>
+      <td>1</td>
+    </tr>
+  </table>
+</center>
+
+</body>
+</html>
 <div>
 <a href='https://www.freepik.com/vectors/background'>Background vector created by freepik - www.freepik.com</a>
 </div>
