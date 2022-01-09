@@ -14,6 +14,7 @@ RSpec.describe 'Leaderboard', type: :feature do
   it 'has buttons for region' do
     expect(page).to have_content 'City'
     expect(page).to have_content 'State'
+    expect(page).to have_content 'Country'
     expect(page).to have_content 'World'
   end
 end
