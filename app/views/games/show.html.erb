@@ -4,26 +4,28 @@
     <h3>Final Score</h3>
   </div>
 
-  <div class='row'>
-    <div class='col-2'></div>
-    <div class='jumbotron jumbotron-fluid'>
-      <p class='score'><%= @game.score %></p>
-      <p>Correct Answers: <%= @game.correct %>/5</p>
-      <p>Your time: <%= @game.time %></p>
-      <p>Average time per question: <%= @game.avg_time %></p>
+  <div class='jumbotron jumbotron-fluid'>
+    <div class='row'>
+      <div class='col-6 mx-auto'>
+        <h4 class='score align-middle'><%= @game.score %></h4>
+        <p>Correct Answers: <%= @game.correct %>/5</p>
+        <p>Your time: <%= @game.time %></p>
+        <p>Average time per question: <%= @game.avg_time %></p>
+      </div>
     </div>
-    <div class='col-2'></div>
-  </div>
-
-  <div class='row justify-content-evenly'>
-    <div class='col'>
-      <a href='/dashboard' class="btn btn-outline-dark">Dashboard</button>
+    <div class='row'>
+      <div class='col-6 mx-auto'>TWEET BRAG PLACEHOLDER</div>
     </div>
-    <div class='col'>
-      <a href='/' class="btn btn-outline-success">Play Again</button>
-    </div>
-    <div class='col'>
-      <a href='/leaderboard' class="btn btn-outline-dark">High Scores</button>
+    <div class='row justify-content-center btn-nav'>
+      <div class='col-2'>
+        <a href='/dashboard' class="btn btn-outline-dark">Dashboard</a>
+      </div>
+      <div class='col-2'>
+        <a href='/' class="btn btn-outline-success">Play Again</a>
+      </div>
+      <div class='col-2'>
+        <a href='/leaderboard' class="btn btn-outline-dark">High Scores</a>
+      </div>
     </div>
   </div>
 </div>
