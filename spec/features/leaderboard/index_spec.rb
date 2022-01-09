@@ -6,8 +6,14 @@ RSpec.describe 'Leaderboard', type: :feature do
   end
 
   it 'has a leaderboard' do
-    save_and_open_page
     
-    expect(page).to have_content 'Leaderboard'
+    expect(page).to have_content 'User'
+    expect(page).to have_content 'Score'
+  end
+
+  it 'has buttons for region' do
+    expect(page).to have_content 'City'
+    expect(page).to have_content 'State'
+    expect(page).to have_content 'World'
   end
 end

@@ -36,6 +36,15 @@ h3 {
   font-style: italic; 
   font-size: 75px; 
 }
+
+h4 {
+  color: white;
+  text-shadow: 10px 10px 15px #000000;
+  font-family: "Marker Felt";
+  font-weight: bold;
+  font-style: italic; 
+  font-size: 25px; 
+}
 /* div.col-sm-4 {
   background_color: white;
 } */
