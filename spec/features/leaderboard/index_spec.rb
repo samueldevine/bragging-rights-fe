@@ -6,7 +6,6 @@ RSpec.describe 'Leaderboard', type: :feature do
   end
 
   it 'has a leaderboard' do
-    save_and_open_page
     
     expect(page).to have_content 'Leaderboard'
   end
