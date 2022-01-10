@@ -3,8 +3,8 @@ class QuestionsController < ApplicationController
     if params[:id] == 6
       render '/final_score'
     else
-      @game
+      @question = session[:questions][session[:questions_answered]]
+      session[:questions_answered] += 1
     end
   end
 end
-

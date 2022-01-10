@@ -1,11 +1,12 @@
 <div class='container'>
-<h3>Question <%= @game.questions.first.id %></h3>
+  <!-- needs to be refactored for question id -->
+<h3>Question <%= @question["id"] %></h3>
 
   <div class='row'>
-    <%= @game.questions.first.question %>
+    <%= @question["question"] %>
   </div>
 
-  <% @game.questions.first.answers.each do |answer| %>
-    <%= link_to answer, game_path(@game), method: :patch %>
+  <% @question['answers'].each do |answer| %>
+    <%= link_to answer, '/quiz' %>
   <% end %>
 </div>
