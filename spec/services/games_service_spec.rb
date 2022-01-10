@@ -5,13 +5,16 @@ RSpec.describe GamesService do
     expect(GamesService.conn).to be_a Faraday::Connection
   end
 
-  it 'gets a (QUESTION/GAME?) from the back end' do
+  it 'gets questions from the back end' do
     game = GamesService.get_game
+    first_question = game[:data].first[:attributes]
 
-    # revisit this test once we have a working endpoint
     expect(game).to be_a Hash
-    expect(game).to have_key :data
+    expect(first_question).to have_key :question
+    expect(first_question).to have_key :correct_answer
+    expect(first_question).to have_key :answers
+    expect(first_question[:answers]).to be_an Array
+    expect(first_question[:answers].length).to eq 4
+    expect(first_question[:answers]).to include(first_question[:correct_answer])
   end
-
-  # shouldn't need to test request.remote_ip method since it's build into rails
 end
