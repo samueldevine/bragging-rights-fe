@@ -1,5 +1,6 @@
 class Game
-  attr_reader   :user_id,
+  attr_reader   :id,
+                :user_id,
                 :city,
                 :state,
                 :country
@@ -10,6 +11,7 @@ class Game
                 :time
 
   def initialize(data)
+    @id        = data[:id]
     @user_id   = data[:user_id]
     @score     = 0
     @city      = data[:city]

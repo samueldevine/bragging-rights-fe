@@ -4,6 +4,7 @@ class GamesFacade
       questions = GamesService.get_game[:data][0..4]
       user_location = GamesService.get_user_location[:data][:attributes]
       Game.new(
+        id: 1,
         user_id: User.find(user_id),
         city: user_location[:city],
         state: user_location[:state],

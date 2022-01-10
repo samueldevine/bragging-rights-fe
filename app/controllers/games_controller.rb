@@ -3,14 +3,16 @@ class GamesController < ApplicationController
     # high scores
   end
 
-  def new
+  # having trouble right now figuring out how to deal with creating a new game and passing that data to the right view
+  # also: game ids can't be autoincremented unless we get a blank new game from the back end
 
+  def new
   end
 
   def create
-    game = GamesFacade.create_game(session[:user_id])
+    @game = GamesFacade.create_game(session[:user_id])
     # question ids are being set to 1-5 by the BE
-    redirect_to game_question_path(game.id, 1)
+    render game_question_path(@game.id, 1)
   end
 
   def show
