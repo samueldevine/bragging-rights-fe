@@ -4,20 +4,32 @@ class GamesController < ApplicationController
   end
 
   def new
-    @game = Game.new
+
   end
 
   def create
-    # post a new game to the backend DB
-    @game = Game.new!(game_params)
-
-    render 'show'
+    game = GamesFacade.create_game(session[:user_id])
+    # question ids are being set to 1-5 by the BE
+    redirect_to game_question_path(game.id, 1)
   end
 
   def show
     # just for testing
     params = { score: 50000 }
     @game = Game.new(params)
+  end
+
+  def update
+    # make sure formatting is perfect here so that correct answers will be registered
+    # correct answer
+    if @game.questions[params[:id]].correct_answer == params[:answer]
+      @game.score += 500
+      @game.correct += 1
+    end
+
+    @game.questions.shift
+
+    render "/questions/#{params[:id]+1}"
   end
 
   private

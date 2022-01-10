@@ -1,0 +1,11 @@
+<div class='container'>
+<h3>Question <%= @game.questions.first.id %></h3>
+
+  <div class='row'>
+    <%= @game.questions.first.question %>
+  </div>
+
+  <% @game.questions.first.answers.each do |answer| %>
+    <%= link_to game_path(@game), answer, hidden %>
+  <% end %>
+</div>
