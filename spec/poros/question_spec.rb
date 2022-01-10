@@ -3,10 +3,12 @@ require 'rails_helper'
 RSpec.describe Question do
   before :each do
     @question = Question.new(
-      id: 1,
-      question: 'Question 1',
-      correct_answer: 'Answer 1',
-      answers: ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4']
+      attributes: {
+        id: 1,
+        question: 'Question 1',
+        correct_answer: 'Answer 1',
+        answers: ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4']
+      }
     )
   end
 

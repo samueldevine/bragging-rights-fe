@@ -5,10 +5,10 @@ class Question
               :answers
 
   def initialize(data)
-    @id             = data[:id]
-    @question       = data[:question]
-    @correct_answer = data[:correct_answer]
-    @answers        = data[:answers]
+    @id             = data[:attributes][:id]
+    @question       = data[:attributes][:question]
+    @correct_answer = data[:attributes][:correct_answer]
+    @answers        = data[:attributes][:answers]
   end
 
   def correct?(answer)

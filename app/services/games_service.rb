@@ -10,9 +10,11 @@ class GamesService
     end
 
     def get_game
-      # returns an array of questions
-      url = 'api/v1/questions'
-      parse_response(url)
+      parse_response('api/v1/questions')
+    end
+
+    def get_user_location
+      parse_response('api/v1/locations')
     end
   end
 end
