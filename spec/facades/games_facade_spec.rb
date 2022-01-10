@@ -2,6 +2,11 @@ require 'rails_helper'
 
 RSpec.describe GamesFacade do
   it 'creates a game made up of questions' do
-    # waiting on this test until we hit the endpoint
+    user = User.create!(uid: 123456, nickname: 'chazsimons', access_token: '123')
+    game = GamesFacade.create_game(user.id)
+
+    expect(game).to be_a Game
+    expect(game.questions.length).to eq 5
+    expect(game.questions.first).to be_a Question
   end
 end
