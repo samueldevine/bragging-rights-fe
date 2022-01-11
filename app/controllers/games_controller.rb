@@ -1,3 +1,4 @@
+
 class GamesController < ApplicationController
   def index
     # high scores
@@ -25,11 +26,10 @@ class GamesController < ApplicationController
     session[:score] = (session[:correct_answers] * 10000 - (session[:time] * 50))
 
     @game = Game.new(session)
-    test = Faraday.post('http://fast-inlet-74665.herokuapp.com/api/v1/scores') do |req|
-      :body => {score: @game}.to_json,
-      :headers => {'Content-Type' => 'application/json'}
+    test = Faraday.post('http://localhost:5000/api/v1/scores',
+      {score: @game}.to_json,
+      headers = {'Content-Type' => 'application/json'}
     )
-    binding.pry
     #location params geo_scope, user_location
     #user high score params user_id
   end
