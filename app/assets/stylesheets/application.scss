@@ -63,3 +63,32 @@ h4 {
   border-radius: 8px;
   padding: 20px 0;
 }
+
+table, th, td {
+  border-radius: 5px;
+  text-align: center;
+  width: 30%;
+  margin-top: 25px;
+  padding: 8px;
+}
+
+th {
+background-color: #ff3333;
+color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
+  color: #3333ff;
+  font-weight: bold;
+}
+tr:nth-child(odd) {
+  background-color: #3333ff;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.location-select {
+  background-color: white;
+  width: 300px;
+}
