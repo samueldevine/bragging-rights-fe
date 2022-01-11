@@ -8,7 +8,7 @@
 
   <%= form_with url: '/quiz', method: :get, remote: true do |f| %>
     <% @question['answers'].each do |answer| %>
-      <div class='row text-center answer'>
+      <div class='row answer'>
         <%= f.submit "#{answer}" %>
       </div>
     <% end %>
