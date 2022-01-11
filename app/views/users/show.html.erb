@@ -2,7 +2,7 @@
   <div class="row text-center bg-dark m-5 p-4">
     <h3>Welcome @<%= @user.nickname %>!</h3>
     <h4 class="pb-4">Test your trivia knowledge against the world!</h4>
-    <%= button_to 'Play', new_game_path, method: :get, class: "btn btn-lg btn-outline-light" %>
+    <%= button_to 'Play', '/games/new', method: :get, class: "btn btn-lg btn-outline-light" %>
   </div>
 
   <div class="row text-center bg-semi-transparent m-5">
