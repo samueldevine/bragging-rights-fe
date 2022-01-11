@@ -71,11 +71,13 @@ table, th, td {
   width: 30%;
   margin-top: 25px;
   padding: 8px;
+  font-size: large;
 }
 
 th {
 background-color: #f5ca12;
 color: #22252a;
+font-size: larger;
 }
 
 tr:nth-child(even) {
@@ -90,8 +92,7 @@ tr:nth-child(odd) {
 }
 
 .location-select {
-  background-color: white;
-  width: 300px;
+  font-size: medium;
 }
 
 .bg-semi-transparent {
