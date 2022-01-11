@@ -28,19 +28,6 @@ class GamesController < ApplicationController
 
   end
 
-  def update
-    # make sure formatting is perfect here so that correct answers will be registered
-    # correct answer
-    if @game.questions[params[:id]].correct_answer == params[:answer]
-      @game.score += 500
-      @game.correct += 1
-    end
-
-    @game.questions.shift
-
-    render "/questions/#{params[:id]+1}"
-  end
-
   private
 
   def game_params
