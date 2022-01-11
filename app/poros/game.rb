@@ -1,23 +1,21 @@
 class Game
-  attr_reader :uid,
-              :score,
-              :city,
-              :state,
-              :country,
-              :correct,
-              :time
+  attr_reader   :user_id,
+                :score,
+                :time,
+                :correct_answers,
+                :questions_answered,
+                :ip
 
   def initialize(data)
-    @uid     = data[:uid]
-    @score   = data[:score]
-    @city    = data[:city]
-    @state   = data[:state]
-    @country = data[:country]
-    @correct = 0
-    @time    = 0
+    @user_id            = data[:user_id]
+    @score              = data[:score]
+    @time               = data[:time]
+    @correct_answers    = data[:correct_answers]
+    @questions_answered = data[:questions_answered]
+    @ip                 = data[:ip]
   end
 
   def avg_time
-    @time / 5
+    @time / @questions_answered
   end
 end

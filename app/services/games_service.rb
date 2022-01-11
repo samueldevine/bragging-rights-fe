@@ -5,18 +5,16 @@ class GamesService
     end
 
     def parse_response(url)
-      params = { ip_address: request.remote_ip }
-      response = conn.get(url, params)
+      response = conn.get(url)
       JSON.parse(response.body, symbolize_names: true)
     end
 
     def get_game
-      # not sure yet if we're getting a whole game (array of questions), or a single question at a time. this method will need to be modified accordingly.
+      parse_response('api/v1/questions')
+    end
 
-      # url? talk to BE team
-      # url = 'api/v1/game'
-      # params = ''
-      parse_response(url)
+    def get_user_location
+      parse_response('api/v1/locations')
     end
   end
 end
