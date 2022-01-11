@@ -21,6 +21,12 @@ body  {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #cccccc;
+  padding-bottom: 70px;
+}
+
+footer {
+  background-color: #22252a;
+  color: white;
 }
 
 h1 {
@@ -30,6 +36,15 @@ h1 {
   font-weight: bold;
   font-style: italic;
   font-size: 150px;
+}
+
+h2 {
+  color: white;
+  text-shadow: 10px 10px 15px #000000;
+  font-family: "Marker Felt";
+  font-weight: bold;
+  font-style: italic;
+  font-size: 100px;
 }
 
 h3 {
@@ -73,22 +88,30 @@ table, th, td {
 }
 
 th {
-background-color: #ff3333;
-color: white;
+background-color: #f5ca12;
+color: #22252a;
 }
 
 tr:nth-child(even) {
-  background-color: #ffffff;
-  color: #3333ff;
+  background-color: #22252a;
+  color: white;
   font-weight: bold;
 }
 tr:nth-child(odd) {
-  background-color: #3333ff;
-  color: #ffffff;
+  background-color: white;
+  color: #22252a;
   font-weight: bold;
 }
 
 .location-select {
   background-color: white;
   width: 300px;
+}
+
+.bg-semi-transparent {
+  background: rgba(34, 37, 42, .5);
+}
+
+.dashboard-panel {
+  border-style: solid;
 }

@@ -1,38 +1,36 @@
-<%= render "welcome/navbar" %>
-
 <div class="container-fluid">
-  <div class="jumbotron text-center">
-    <h2>Welcome @<%= @user.nickname %>!</h1>
-    <p>Test your trivia knowledge against the world!</p>
+  <div class="row text-center bg-dark m-5 p-4">
+    <h3>Welcome @<%= @user.nickname %>!</h3>
+    <h4 class="pb-4">Test your trivia knowledge against the world!</h4>
+    <%= button_to 'Play', new_game_path, method: :get, class: "btn btn-lg btn-outline-light" %>
   </div>
 
+  <div class="row text-center bg-semi-transparent m-5">
 
-  <%= button_to 'Play', new_game_path, method: :get %>
+    <div class="col-lg-4 dashboard-panel">
+      <img src="https://chagfilm.org/wp-content/uploads/2014/09/batman-pow-300x219.png">
+    </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        <img src="https://chagfilm.org/wp-content/uploads/2014/09/batman-pow-300x219.png">
-      </div>
-      <div class="col-sm-4">
-        <div class="bg-success p-2 text-dark bg-opacity-25">
-        <h4>Your High Scores</h3>
-        <%# <% @user.find_high_scores.each do |score| %>
-        <ul>
-          <li>SCORES WILL GO HERE</li>
-          <li>my ip address: <%= request.remote_ip %></li>
-        </ul>
-        <%# end %>
-        </div>
-      </div>
-      <div class="col-sm-4">
-      <div class="bg-success p-2">
-        <!-- <div class="p-3 mb-2 bg-secondary text-dark"> -->
+    <div class="col-lg-4 dashboard-panel">
 
-          <h4>Challenge Your Friends!</h3>
-          <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Think you&#39;ve got what it takes to beat this brag?!?" data-url="https://shielded-anchorage-65791.heroku.com" data-hashtags="IveGotBraggingRights #TestYourMind" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <!-- </div> -->
-      </div>
+      <h4 class="p-4">Your High Scores</h4>
+
+      <table class="table">
+        <tr>
+          <td>placeholder score 1</td>
+        </tr>
+        <tr>
+          <td>placeholder score 2</td>
+        </tr>
+        <tr>
+          <td>placeholder score 3</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="col-lg-4 dashboard-panel">
+      <h4 class="p-4">Challenge Your Friends!</h4>
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Think you&#39;ve got what it takes to beat this brag?!?" data-url="https://shielded-anchorage-65791.heroku.com" data-hashtags="IveGotBraggingRights #TestYourMind" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
   </div>
 </div>
