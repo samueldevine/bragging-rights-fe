@@ -9,9 +9,9 @@ class GamesController < ApplicationController
 
 #add conditional logic if no user_id
   def new
-    session[:start] = Time.now
+    session[:start_time] = Time.now
     session[:score] = 0
-    session[:ip_address] = request.remote_ip
+    session[:ip] = request.remote_ip
     session[:correct_answers] = 0
     session[:questions_answered] = 0
     session[:questions] = GamesFacade.get_questions
@@ -24,9 +24,11 @@ class GamesController < ApplicationController
   end
 
   def show
-    # just for testing
-    params = { score: 50000 }
-    @game = Game.new(params)
+    start_time = session[:start_time].to_datetime.strftime('%s').to_i
+    session[:time] = (Time.now.strftime('%s').to_i - start_time)
+    session[:score] = session[:correct_answers] * 10000
+
+    @game = Game.new(session)
   end
 
   def update

@@ -6,9 +6,9 @@
     <%= @question["question"] %>
   </div>
 
-  <% @question['answers'].each do |answer| %>
-  <div class='answer'>
-    <%= link_to answer, '/quiz' %>
-  </div>
+  <%= form_with url: '/quiz', method: :get, remote: true do |f| %>
+    <% @question['answers'].each do |answer| %>
+      <%= f.submit "#{answer}" %>
+    <% end %>
   <% end %>
 </div>

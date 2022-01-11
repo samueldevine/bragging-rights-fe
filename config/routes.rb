@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/leaderboard',           to: 'leaderboard#index'
   get '/logout',                to: 'users#destroy'
   get '/quiz',                  to: 'questions#show'
+  get '/final_score',           to: 'games#show'
 
   resources :games, only: [:new, :create, :show, :update] do
     resources :questions, only: :show

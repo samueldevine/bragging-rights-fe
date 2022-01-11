@@ -1,40 +1,21 @@
 class Game
-  attr_reader   :id,
-                :user_id,
-                :city,
-                :state,
-                :country
-
-  attr_accessor :score,
-                :questions,
-                :correct,
-                :time
+  attr_reader   :user_id,
+                :score,
+                :time,
+                :correct_answers,
+                :questions_answered,
+                :ip
 
   def initialize(data)
-    @id        = data[:id]
-    @user_id   = data[:user_id]
-    @score     = 0
-    @city      = data[:city]
-    @state     = data[:state]
-    @country   = data[:country]
-    @questions = create_questions(data[:questions]) if data[:questions]
-    @q_count   = count_questions
-    @correct   = 0
-    @time      = 0
+    @user_id            = data[:user_id]
+    @score              = data[:score]
+    @time               = data[:time]
+    @correct_answers    = data[:correct_answers]
+    @questions_answered = data[:questions_answered]
+    @ip                 = data[:ip]
   end
 
   def avg_time
-    @time / @q_count
-  end
-
-  def create_questions(question_data)
-    question_data.map do |q|
-      Question.new(q)
-    end
-  end
-
-  # call this method on initialization because the game will delete questions as it's played
-  def count_questions
-    @questions.length
+    @time / @questions_answered
   end
 end
