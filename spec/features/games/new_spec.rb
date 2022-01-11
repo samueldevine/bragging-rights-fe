@@ -18,7 +18,6 @@ RSpec.describe "New Game" do
     visit new_game_path
 
     find('.answer', match: :first).click
-    save_and_open_page
     expect(page).to have_content("Question 2")
 
     find('.answer', match: :first).click
