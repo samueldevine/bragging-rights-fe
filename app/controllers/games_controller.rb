@@ -19,16 +19,13 @@ class GamesController < ApplicationController
     redirect_to '/quiz'
   end
 
-  def create
-    # session[:end] = Time.now
-  end
-
   def show
     start_time = session[:start_time].to_datetime.strftime('%s').to_i
     session[:time] = (Time.now.strftime('%s').to_i - start_time)
-    session[:score] = session[:correct_answers] * 10000
+    session[:score] = (session[:correct_answers] * 10000 - (session[:time] * 50))
 
     @game = Game.new(session)
+
   end
 
   def update
