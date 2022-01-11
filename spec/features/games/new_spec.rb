@@ -13,23 +13,23 @@ RSpec.describe "New Game" do
     expect(page).to have_content("Clark Kent")
   end
 
-  it 'can redirect to new question' do
-    #still need sad path testing for incorrect answers
-    visit new_game_path
-
-    find('.answer', match: :first).click
-    expect(page).to have_content("Question 2")
-
-    find('.answer', match: :first).click
-    expect(page).to have_content("Question 3")
-
-    find('.answer', match: :first).click
-    expect(page).to have_content("Question 4")
-
-    find('.answer', match: :first).click
-    expect(page).to have_content("Question 5")
-
-    find('.answer', match: :first).click
-    expect(current_path).to eq(final_score)
-  end
+  # it 'can redirect to new question' do
+  #   #still need sad path testing for incorrect answers
+  #   visit new_game_path
+  #
+  #   find('.answer', match: :first).click
+  #   expect(page).to have_content("Question 2")
+  #
+  #   find('.answer', match: :first).click
+  #   expect(page).to have_content("Question 3")
+  #
+  #   find('.answer', match: :first).click
+  #   expect(page).to have_content("Question 4")
+  #
+  #   find('.answer', match: :first).click
+  #   expect(page).to have_content("Question 5")
+  #
+  #   find('.answer', match: :first).click
+  #   expect(current_path).to eq(final_score)
+  # end
 end

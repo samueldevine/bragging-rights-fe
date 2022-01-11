@@ -25,20 +25,27 @@ class GamesController < ApplicationController
     session[:score] = (session[:correct_answers] * 10000 - (session[:time] * 50))
 
     @game = Game.new(session)
-
+    test = Faraday.post('http://fast-inlet-74665.herokuapp.com/api/v1/scores') do |req|
+      :body => {score: @game}.to_json,
+      :headers => {'Content-Type' => 'application/json'}
+    )
+    binding.pry
+    #location params geo_scope, user_location
+    #user high score params user_id
   end
 
   def update
     # make sure formatting is perfect here so that correct answers will be registered
     # correct answer
-    if @game.questions[params[:id]].correct_answer == params[:answer]
-      @game.score += 500
-      @game.correct += 1
-    end
-
-    @game.questions.shift
-
-    render "/questions/#{params[:id]+1}"
+    # if @game.questions[params[:id]].correct_answer == params[:answer]
+    #   @game.score += 500
+    #   @game.correct += 1
+    # end
+    #
+    # @game.questions.shift
+    #
+    # render "/questions/#{params[:id]+1}"
+    finished_game = Faraday.post('/fast_inlet/api/v1/scores')
   end
 
   private
