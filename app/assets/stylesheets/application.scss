@@ -115,3 +115,21 @@ tr:nth-child(odd) {
 .dashboard-panel {
   border-style: solid;
 }
+
+.question {
+  background-color: #22252a;
+  color: white;
+  font-family: "Marker Felt";
+  font-size: 50px;
+  padding: 20px;
+  text-align: center;
+}
+
+.answer {
+  background-color: rgba(34, 37, 42, .5);
+  font-family: "Marker Felt";
+  font-size: 25px;
+  font-style: italic;
+  padding: 10px;
+  text-align: center;
+}
