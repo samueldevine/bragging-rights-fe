@@ -16,7 +16,7 @@ A Comic Trivia Challenge (2 week sprint)
 
 "Bragging Rights" is a trivia competition app that lets you flex that knowledge! Find out how you rank against users from your city, state or country! Users log in with Twitter, and can tweet their scores to challenge friends. 
 
-Take the quiz at [Bragging Rights!](shielded-anchorage-65791.heroku.com)
+Take the quiz at [Bragging Rights!](https://shielded-anchorage-65791.herokuapp.com)
 
 ## Tech Stack:
 - Rails 5.2.6

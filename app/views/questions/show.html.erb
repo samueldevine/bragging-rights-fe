@@ -1,0 +1,16 @@
+<div class='container'>
+  <!-- needs to be refactored for question id -->
+<h3 class='text-center'>Question <%= @question["id"] %></h3>
+
+  <div class='row text-center'>
+    <%= @question["question"] %>
+  </div>
+
+  <%= form_with url: '/quiz', method: :get, remote: true do |f| %>
+    <% @question['answers'].each do |answer| %>
+      <div class='row text-center'>
+        <%= f.submit "#{answer}" %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
