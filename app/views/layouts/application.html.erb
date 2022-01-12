@@ -12,6 +12,8 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%# <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag asset_path('favicon.ico') %>
+
+    <%= render "welcome/navbar" %>
   </head>
 
   <body>
@@ -21,4 +23,8 @@
 
     <%= yield %>
   </body>
+
+  <footer class="fixed-bottom text-right m-2 p-2">
+    Background vector created by freepik: <a href='https://www.freepik.com/vectors/background'>www.freepik.com</a>
+  </footer>
 </html>
