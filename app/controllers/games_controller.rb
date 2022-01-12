@@ -1,7 +1,9 @@
 
 class GamesController < ApplicationController
   def index
-    #scores
+    binding.pry
+    #need to pass in location params
+    ScoresFacade.top_scores_by_location()
   end
 
   def new

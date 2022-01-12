@@ -5,6 +5,7 @@ class ScoresFacade
       Score.new(score)
     end
   end
+  
   def self.top_scores_by_location(geo_scope, user_location)
     payload = ScoreService.location(geo_scope, user_location)
     payload[:data].map do |score|
