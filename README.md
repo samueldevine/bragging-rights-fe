@@ -27,11 +27,21 @@ Take the quiz at [Bragging Rights!](https://shielded-anchorage-65791.herokuapp.c
 
 ## Setup
 
+If you'd like to fork the repository and pull it down to explore locally, you'll need to follow along with our setup guide below:
+
 * From the command line, install gems and set up your DB:
     * `bundle`
     * `rails db:{create,migrate}`
+* Sign up for a Twitter Developer account (if you don't already have one), create an app, and grab your API Key and Secret.
+    * Under user authentication settings, make sure to enable OAuth 1.0, ask users for Read and Write permissions, and use `http://localhost:3000/auth/twitter/callback` (or your preferred port) for the callback URL, and `https://shielded-anchorage-65791.herokuapp.com/` for the site url.
+* Back on the command line, run `bundle exec figaro install` to create an `application.yml` file and add it to your .gitignore (for keeping your API keys secret and safe).
+* Add the following lines to your `application.yml` file, replaying {key} and {secret} with the information from your Twitter developer portal:
+   ```
+   twitter_api_key: {key}
+   twitter_api_key_secret: {secret}
+   ```
 * Run the test suite with `bundle exec rspec`.
-* Run your development server with `rails s` to see the app in action.
+* Run your development server with `rails s`, and navigate to `localhost:3000` in your browser to see the app in action.
 
 ## Architecture
 This app is created with a service oriented architecture. This front-end component sends and receives api calls from our backend to populate questions and record user scores.
