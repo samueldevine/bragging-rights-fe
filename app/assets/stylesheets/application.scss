@@ -21,6 +21,12 @@ body  {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #cccccc;
+  padding-bottom: 70px;
+}
+
+footer {
+  background-color: #22252a;
+  color: white;
 }
 
 h1 {
@@ -28,8 +34,17 @@ h1 {
   text-shadow: 10px 10px 15px #000000;
   font-family: "Marker Felt";
   font-weight: bold;
-  font-style: italic; 
-  font-size: 150px; 
+  font-style: italic;
+  font-size: 5vw;
+}
+
+h2 {
+  color: white;
+  text-shadow: 10px 10px 15px #000000;
+  font-family: "Marker Felt";
+  font-weight: bold;
+  font-style: italic;
+  font-size: 4vw;
 }
 
 h3 {
@@ -38,7 +53,7 @@ h3 {
   font-family: "Marker Felt";
   font-weight: bold;
   font-style: italic;
-  font-size: 75px;
+  font-size: 3.5vw;
 }
 
 h4 {
@@ -47,19 +62,74 @@ h4 {
   font-family: "Marker Felt";
   font-weight: bold;
   font-style: italic;
-  font-size: 25px;
+  font-size: 2.5vw;
+}
+
+table, th, td {
+  border-radius: 5px;
+  text-align: center;
+  width: 30%;
+  margin-top: 25px;
+  padding: 8px;
+  font-size: 1.5vw;
+}
+
+th {
+background-color: #f5ca12;
+color: #22252a;
+font-size: larger;
+}
+
+tr:nth-child(even) {
+  background-color: #22252a;
+  color: white;
+  font-weight: bold;
+}
+tr:nth-child(odd) {
+  background-color: white;
+  color: #22252a;
+  font-weight: bold;
+}
+
+.location-select {
+  font-size: 1vw;
+}
+
+.bg-semi-transparent {
+  background: rgba(34, 37, 42, .5);
+}
+
+.dashboard-panel {
+  border-style: solid;
+}
+
+.question {
+  background-color: #22252a;
+  color: white;
+  font-family: "Marker Felt";
+  font-size: 3vw;
+  padding: 20px;
+  text-align: center;
+}
+
+.answer {
+  background-color: rgba(34, 37, 42, .5);
+  font-family: "Marker Felt";
+  font-size: 2.5vw;
+  font-style: italic;
+  padding: 10px;
+  text-align: center;
 }
 
 .score {
-  color: black;
-  font-family: "Marker Felt";
-  font-style: italic;
-  font-size: 50px;
-  height: 100px;
-  width: 200px;
-  border-style: groove;
-  border-width: 5px;
-  border-color: #de2320;
   border-radius: 8px;
-  padding: 20px 0;
+  border-color: white;
+  border-style: double;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.stats {
+  color: white;
+  font-size: 1.5vw;
 }

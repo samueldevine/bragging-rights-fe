@@ -4,11 +4,6 @@ class GamesController < ApplicationController
     #scores
   end
 
-  # having trouble right now figuring out how to deal with creating a new game and passing that data to the right view
-  # also: game ids can't be autoincremented unless we get a blank new game from the back end
-
-
-#add conditional logic if no user_id
   def new
     session[:start_time] = Time.now
     session[:score] = 0
@@ -29,20 +24,6 @@ class GamesController < ApplicationController
       headers = {'Content-Type' => 'application/json'}
     )
   end
-
-  # def update
-    # make sure formatting is perfect here so that correct answers will be registered
-    # correct answer
-    # if @game.questions[params[:id]].correct_answer == params[:answer]
-    #   @game.score += 500
-    #   @game.correct += 1
-    # end
-    #
-    # @game.questions.shift
-    #
-    # render "/questions/#{params[:id]+1}"
-  #   finished_game = Faraday.post('/fast_inlet/api/v1/scores')
-  # end
 
   private
 
