@@ -1,7 +1,7 @@
 class ScoresFacade
   def self.top_scores_by_user(user_id)
-    payload = ScoreService.conn(user_id)
-    payload.map do |score|
+    payload = ScoreService.user(user_id)
+    payload["data"].map do |score|
       Score.new(score)
     end
   end

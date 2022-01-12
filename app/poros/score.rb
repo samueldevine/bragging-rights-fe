@@ -1,10 +1,12 @@
 class Score
-  attr_reader :score, :game_time, :city, :state, :country, :id
-  def initialize(attr)
-    @score = attr[:score]
-    @game_time = attr[:game_time]
-    @city = attr[:city]
-    @state = attr[:state]
-    @country = attr[:country]
+  attr_reader :user_id, :score, :game_time, :city, :state, :country, :id
+
+  def initialize(info)
+    @user_id        = info[:user_id]
+    @score          = info[:score]
+    @game_time      = info[:game_time]
+    @city           = info[:city]
+    @state          = info[:state]
+    @country        = info[:country]
   end
 end
