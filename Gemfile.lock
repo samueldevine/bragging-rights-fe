@@ -265,6 +265,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.2)
   faraday
+  faraday-net_http
   figaro
   jbuilder (~> 2.5)
   launchy
