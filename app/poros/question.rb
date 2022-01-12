@@ -6,12 +6,18 @@ class Question
 
   def initialize(data)
     @id             = data[:attributes][:id]
-    @question       = data[:attributes][:question]
+    @question       = CGI.unescapeHTML(data[:attributes][:question])
     @correct_answer = data[:attributes][:correct_answer]
-    @answers        = data[:attributes][:answers]
+    @answers        = html_cleanup(data[:attributes][:answers])
   end
 
   def correct?(answer)
     answer == @correct_answer
+  end
+
+  def html_cleanup(answers)
+    answers.map do |answer|
+      CGI.unescapeHTML(answer)
+    end
   end
 end
