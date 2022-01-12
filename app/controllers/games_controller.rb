@@ -16,7 +16,6 @@ class GamesController < ApplicationController
     session[:correct_answers] = 0
     session[:questions_answered] = 0
     session[:questions] = GamesFacade.get_questions
-
     redirect_to '/quiz'
   end
 
@@ -24,7 +23,6 @@ class GamesController < ApplicationController
     start_time = session[:start_time].to_datetime.strftime('%s').to_i
     session[:time] = (Time.now.strftime('%s').to_i - start_time)
     session[:score] = (session[:correct_answers] * 10000 - (session[:time] * 50))
-
     @game = Game.new(session)
     test = Faraday.post('http://localhost:5000/api/v1/scores',
       {score: @game}.to_json,

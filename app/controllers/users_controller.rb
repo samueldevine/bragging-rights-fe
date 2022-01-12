@@ -4,20 +4,19 @@ class UsersController < ApplicationController
     twitter_id = auth_hash['uid']
     nickname = auth_hash['extra']['access_token'].params['screen_name']
     access_token = auth_hash['credentials']['token']
-
     user = User.find_or_create_by(uid: twitter_id)
-    user.update(access_token: access_token, nickname: nickname)
+    user.update(access_token: access_token, nickname: nickname, uid: twitter_id)
 
-    session[:user_id] = user.id
+    session[:user_id] = user.uid
 
     redirect_to '/dashboard'
   end
 
   def show
     if session[:user_id].nil?
-      session[:user_id] = User.all.first[:id]
+      session[:user_id] = User.all.first[:uid]
     end
-    @user = User.find(session[:user_id])
+    @user = User.find_by(uid: session[:user_id])
   end
 
   def destroy
