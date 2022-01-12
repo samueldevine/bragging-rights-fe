@@ -40,6 +40,7 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'bootstrap'
 gem 'faraday-net_http'
+gem 'cgi'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
