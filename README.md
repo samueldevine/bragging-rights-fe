@@ -44,7 +44,7 @@ If you'd like to fork the repository and pull it down to explore locally, you'll
 * Run your development server with `rails s`, and navigate to `localhost:3000` in your browser to see the app in action.
 
 ## Architecture
-This app is created with a service oriented architecture. This front-end component sends and receives api calls from our backend to populate questions and record user scores.
+This app is created with a service oriented architecture. This front-end component sends and receives api calls from our [backend](https://github.com/samueldevine/bragging-rights-be) to populate questions and record user scores.
 The api calls are consumed with a service-facade design pattern to lessen the the amount of data stored and improve performance.
 Twitter login is handled by the OmniAuth-Twitter gem.
 
