@@ -1,7 +1,8 @@
 class GamesService
   class << self
     def conn
-      Faraday.new('https://fast-inlet-74665.herokuapp.com/')
+      Faraday.new('http://localhost:5000/')
+      # Faraday.new('https://fast-inlet-74665.herokuapp.com/')
     end
 
     def parse_response(url)
