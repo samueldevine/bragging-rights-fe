@@ -7,7 +7,6 @@ class Game
                 :ip_address
 
   def initialize(data)
-    binding.pry
     @user_id            = data[:user_id]
     @score              = data[:score]
     @time               = data[:time]
