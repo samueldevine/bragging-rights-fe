@@ -10,7 +10,7 @@ class QuestionsController < ApplicationController
     if session[:questions_answered] == 5
       redirect_to '/final_score'
     else
-      @question = session[:questions][session[:questions_answered]]
+      @question = {q: session[:questions][session[:questions_answered]], num: session[:questions_answered]}
       session[:questions_answered] += 1
     end
   end
