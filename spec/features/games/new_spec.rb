@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "New Game" do
   it 'displays first question' do
-    visit new_game_path
+    visit games_new_path
 
     expect(current_path).to eq('/quiz')
     expect(page).to have_content("Question 1")

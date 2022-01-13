@@ -1,10 +1,10 @@
 
 class GamesController < ApplicationController
-  def index
-    binding.pry
-    #need to pass in location params
-    ScoresFacade.top_scores_by_location()
-  end
+  # def index
+  #   binding.pry
+  #   #need to pass in location params
+  #   ScoresFacade.top_scores_by_location(game_params)
+  # end
 
   def new
     session[:start_time] = Time.now
@@ -25,6 +25,18 @@ class GamesController < ApplicationController
       {score: @game}.to_json,
       headers = {'Content-Type' => 'application/json'}
     )
+  end
+
+  def index
+    ip_address = request.remote_ip
+    if !params["geo_scope"].present?
+      params["geo_scope"] = "city"
+      @scores = ScoresFacade.top_scores_by_location(params["geo_scope"], ip_address)
+      params["geo_scope"] == nil
+    else
+      @scores = ScoresFacade.top_scores_by_location(params["geo_scope"], ip_address)
+    end
+    @location = params['geo_scope']
   end
 
   private

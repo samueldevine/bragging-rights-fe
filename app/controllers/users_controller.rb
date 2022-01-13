@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    #top score by user goes here
     if session[:user_id].nil?
       session[:user_id] = User.all.first[:uid]
     end

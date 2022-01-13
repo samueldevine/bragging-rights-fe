@@ -5,9 +5,9 @@ class ScoresFacade
       Score.new(score)
     end
   end
-  
-  def self.top_scores_by_location(geo_scope, user_location)
-    payload = ScoreService.location(geo_scope, user_location)
+
+  def self.top_scores_by_location(geo_scope, ip_address)
+    payload = ScoreService.location(geo_scope, ip_address)
     payload[:data].map do |score|
       Score.new(score[:attributes])
     end
