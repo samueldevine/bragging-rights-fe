@@ -9,16 +9,16 @@
         <div class="row">
           <h4>Filter Scores by ... </h4>
           <div class="col-sm-3">
-             <a href='/leaderboard' class='btn btn-block btn-dark location-select'>City</a>
+             <%= button_to "City", "/leaderboard", class: 'btn btn-block btn-dark location-select', params: {geo_scope: 'city'}, method: :get%>
           </div>
           <div class="col-sm-3">
-            <a href='/leaderboard' class='btn btn-block btn-dark location-select'>State</a>
+            <%= button_to "State", "/leaderboard", class: 'btn btn-block btn-dark location-select', params: {geo_scope: 'state'}, method: :get%>
           </div>
           <div class="col-sm-3">
-            <a href='/leaderboard' class='btn btn-block btn-dark location-select'>Country</a>
+            <%= button_to "Country", "/leaderboard", class: 'btn btn-block btn-dark location-select', params: {geo_scope: 'country'}, method: :get%>
           </div>
           <div class="col-sm-3">
-            <a href='/leaderboard' class='btn btn-block btn-dark location-select'>World</a>
+            <%= button_to "World", "/leaderboard", class: 'btn btn-block btn-dark location-select', params: {geo_scope: 'world'}, method: :get%>
           </div>
         </div>
       <% end %>
@@ -27,32 +27,18 @@
 
   <div class="row text-center justify-content-center">
     <div class="col-lg-6 bg-semi-transparent">
-      <h4 class="p-2">Scores for (Placeholder for selected location)</h4>
+      <h4 class="p-2">Scores for <%= @location %></h4>
       <table class="table">
         <tr>
           <th>User</th>
           <th>Score</th>
         </tr>
+        <% @scores.each do |score| %>
         <tr>
-          <td>Peter</td>
-          <td>1500</td>
+          <td><%= User.find_by(uid: score.user_id).nickname %></td>
+          <td><%= score.score %></td>
         </tr>
-        <tr>
-          <td>Lois</td>
-          <td>1300</td>
-        </tr>
-        <tr>
-          <td>Chris</td>
-          <td>1200</td>
-        </tr>
-        <tr>
-          <td>Brian</td>
-          <td>1150</td>
-        </tr>
-        <tr>
-          <td>meg</td>
-          <td>1</td>
-        </tr>
+        <% end %>
       </table>
     </div>
   </div>

@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    #top score by user goes here
     if session[:user_id].nil?
       redirect_to root_path
       flash[:alert] = 'You must be logged in to get your brag on!'
