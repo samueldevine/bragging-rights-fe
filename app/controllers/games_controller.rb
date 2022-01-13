@@ -14,7 +14,8 @@ class GamesController < ApplicationController
     start_time = session[:start_time].to_datetime.strftime('%s').to_i
     session[:time] = (Time.now.strftime('%s').to_i - start_time)
     session[:score] = (session[:correct_answers] * 10000 - (session[:time] * 50))
-    ScoresFacade.record_score(Game.new(session))
+    @game = Game.new(session)
+    ScoresFacade.record_score(@game)
   end
 
   def index
