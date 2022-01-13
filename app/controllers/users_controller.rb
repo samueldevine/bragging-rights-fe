@@ -13,12 +13,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    #top score by user goes here
     if session[:user_id].nil?
       redirect_to root_path
       flash[:alert] = 'You must be logged in to get your brag on!'
     end
     @user = User.find_by(uid: session[:user_id])
+    @user_score = ScoresFacade.top_scores_by_user(session[:user_id])
   end
 
   def destroy
