@@ -3,7 +3,7 @@ class GamesController < ApplicationController
   def new
     session[:start_time] = Time.now
     session[:score] = 0
-    session[:ip] = request.remote_ip
+    session[:ip_address] = request.remote_ip
     session[:correct_answers] = 0
     session[:questions_answered] = 0
     session[:questions] = GamesFacade.get_questions
