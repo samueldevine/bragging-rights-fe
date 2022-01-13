@@ -1,8 +1,8 @@
 class ScoresFacade
   def self.top_scores_by_user(user_id)
     payload = ScoreService.user(user_id)
-    payload["data"].map do |score|
-      Score.new(score)
+    payload[:data].map do |score|
+      Score.new(score[:attributes])
     end
   end
 

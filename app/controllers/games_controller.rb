@@ -1,11 +1,5 @@
 
 class GamesController < ApplicationController
-  # def index
-  #   binding.pry
-  #   #need to pass in location params
-  #   ScoresFacade.top_scores_by_location(game_params)
-  # end
-
   def new
     session[:start_time] = Time.now
     session[:score] = 0
@@ -36,7 +30,7 @@ class GamesController < ApplicationController
     else
       @scores = ScoresFacade.top_scores_by_location(params["geo_scope"], ip_address)
     end
-    @location = params['geo_scope']
+    @location = params['geo_scope'].capitalize
   end
 
   private
