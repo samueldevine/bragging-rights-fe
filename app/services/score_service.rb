@@ -5,7 +5,7 @@ class ScoreService
     end
 
     def location(geo_scope, ip_address)
-      response = conn.get("scores?geo_scope=#{geo_scope}&user_location=#{ip_address}")
+      response = conn.get('scores', params: {geo_scope: geo_scope, ip_address: ip_address})
       JSON.parse(response.body, symbolize_names: true)
     end
 
