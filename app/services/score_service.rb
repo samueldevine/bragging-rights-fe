@@ -1,7 +1,7 @@
 class ScoreService
   class << self
     def conn
-      Faraday.new('http://localhost:5000/api/v1/')
+      Faraday.new('https://fast-inlet-74665.herokuapp.com/api/v1/')
     end
 
     def location(geo_scope, ip_address)
@@ -12,6 +12,11 @@ class ScoreService
     def user(user_id)
       response = conn.get("scores?user_id=#{user_id}")
       JSON.parse(response.body, symbolize_names: true)
+    end
+
+    def record_score(game)
+      # this method does not return a response and has status code 204
+      response = conn.post('scores', {score: game}.to_json, headers = {'Content-Type' => 'application/json'})
     end
   end
 end
