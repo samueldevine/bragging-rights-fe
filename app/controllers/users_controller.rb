@@ -14,7 +14,8 @@ class UsersController < ApplicationController
 
   def show
     if session[:user_id].nil?
-      session[:user_id] = User.all.first[:uid]
+      redirect_to root_path
+      flash[:alert] = 'You must be logged in to get your brag on!'
     end
     @user = User.find_by(uid: session[:user_id])
   end
