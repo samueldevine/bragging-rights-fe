@@ -19,15 +19,23 @@ class GamesController < ApplicationController
   end
 
   def index
-    ip = request.remote_ip
+    @ip = "38.34.99.130"
+    # @ip = request.remote_ip
     if !params["geo_scope"].present?
-      params["geo_scope"] = "city"
-      @scores = ScoresFacade.top_scores_by_location(params["geo_scope"], ip)
-      params["geo_scope"] == nil
-    else
-      @scores = ScoresFacade.top_scores_by_location(params["geo_scope"], ip)
+      params["geo_scope"] = "world"
     end
-    @location = params['geo_scope'].capitalize
+    @scores = ScoresFacade.top_scores_by_location(params["geo_scope"], @ip)
+    if @scores
+      if params["geo_scope"] == "city"
+        @location = @scores.first.city
+      elsif params["geo_scope"] == "state"
+        @location = @scores.first.state
+      elsif params["geo_scope"] == "country"
+        @location = @scores.first.country
+      else
+        @location = params["geo_scope"].capitalize
+      end
+    end
   end
 
   private

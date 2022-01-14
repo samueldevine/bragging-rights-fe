@@ -9,8 +9,10 @@ class ScoresFacade
 
     def top_scores_by_location(geo_scope, ip_address)
       payload = ScoreService.location(geo_scope, ip_address)
-      payload[:data].map do |score|
-        Score.new(score[:attributes])
+      if payload[:data]
+        payload[:data].map do |score|
+          Score.new(score[:attributes])
+        end
       end
     end
 

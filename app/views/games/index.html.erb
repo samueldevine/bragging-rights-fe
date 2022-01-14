@@ -27,17 +27,27 @@
 
   <div class="row text-center justify-content-center">
     <div class="col-lg-6 bg-semi-transparent">
-      <h4 class="p-2">Scores for <%= @location %></h4>
+      <% if @scores %>
+        <h4 class="p-2">Scores for <%= @scores.first.city %></h4>
+      <% end %>
+      <p>Current IP Address: <%= @ip %></p>
       <table class="table">
         <tr>
           <th>User</th>
           <th>Score</th>
         </tr>
-        <% @scores.each do |score| %>
-        <tr>
-          <td><%= User.find_by(uid: score.user_id).nickname %></td>
-          <td><%= score.score %></td>
-        </tr>
+        <% if @scores %>
+          <% @scores.each do |score| %>
+          <tr>
+            <td><%= User.find_by(uid: score.user_id).nickname %></td>
+            <td><%= score.score %></td>
+          </tr>
+          <% end %>
+        <% else %>
+          <tr>
+            <td>Error</td>
+            <td>Scores not found :(</td>
+          </tr>
         <% end %>
       </table>
     </div>
