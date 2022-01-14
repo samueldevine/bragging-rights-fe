@@ -1,8 +1,8 @@
 class ScoreService
   class << self
     def conn
-      Faraday.new('http://localhost:5000/api/v1/')
-      # Faraday.new('https://fast-inlet-74665.herokuapp.com/api/v1/')
+      # Faraday.new('http://localhost:5000/api/v1/')
+      Faraday.new('https://fast-inlet-74665.herokuapp.com/api/v1/')
     end
 
     def location(geo_scope, ip_address)
