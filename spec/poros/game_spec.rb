@@ -14,10 +14,7 @@ RSpec.describe Game do
       correct_answer: 'Answer 5',
       answers: ['Answer 5', 'Answer 6', 'Answer 7', 'Answer 8']
     }
-    @game = Game.new(questions: [
-                       { attributes: @q1_data },
-                       { attributes: @q2_data }
-                     ])
+    @game = Game.new(questions_answered: 2, score: 0)
   end
   it 'exists' do
     expect(@game).to be_a Game
@@ -31,13 +28,6 @@ RSpec.describe Game do
     @game.score += 5000
 
     expect(@game.score).to eq 5000
-  end
-
-  it 'creates questions using provided data' do
-    expect(@game.questions.length).to eq 2
-    expect(@game.questions.first).to be_a Question
-    expect(@game.questions.first.question).to eq 'Test 1'
-    expect(@game.questions.first.correct_answer).to eq 'Answer 1'
   end
 
   it 'calculates average time to solve the questions' do

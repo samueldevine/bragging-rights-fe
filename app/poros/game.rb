@@ -1,10 +1,10 @@
 class Game
   attr_reader   :user_id,
-                :score,
-                :time,
                 :correct_answers,
                 :questions_answered,
                 :ip_address
+  attr_accessor :time,
+                :score
 
   def initialize(data)
     @user_id            = data[:user_id]
