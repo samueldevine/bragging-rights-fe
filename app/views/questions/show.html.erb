@@ -1,15 +1,15 @@
 <div class='container'>
-  <!-- needs to be refactored for question id -->
-<h3 class='text-center'>Question <%= @question[:num] + 1 %> of 5</h3>
 
-  <div class='row text-center question'>
+  <h3 class='text-center m-5'>Question <%= @question[:num] + 1 %> of 5</h3>
+
+  <div class='row justify-content-center question'>
     <%= @question[:q]["question"] %>
   </div>
 
   <%= form_with url: '/quiz', method: :get, remote: true do |f| %>
     <% @question[:q]['answers'].each do |answer| %>
       <div class='row answer'>
-        <%= f.submit "#{answer}" %>
+        <%= f.submit "#{answer}", class: 'btn-block' %>
       </div>
     <% end %>
   <% end %>

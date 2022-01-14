@@ -1,12 +1,17 @@
 <div class="container-fluid">
-  <div class="row text-center bg-dark m-5 p-4">
+  <div class="row text-center justify-content-center bg-dark m-5 pt-4 px-4">
     <h3>Welcome @<%= @user.nickname %>!</h3>
     <h4 class="pb-4">Test your trivia knowledge against the world!</h4>
-    <%= button_to 'Play', '/games/new', method: :get, class: "btn btn-lg btn-outline-light" %>
+  </div>
+  <div class = "row text-center justify-content-center">
+    <div class='col-3 answer'>
+      <%= button_to 'Play', '/games/new', method: :get, class: "btn btn-lg btn-light col-12" %>
+    </div>
   </div>
 
   <div class="row text-center bg-semi-transparent m-5">
     <div class="col-lg-4 dashboard-panel">
+      <span class="helper"></span>
       <img src="https://chagfilm.org/wp-content/uploads/2014/09/batman-pow-300x219.png">
     </div>
 

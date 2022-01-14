@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="row text-center mb-5">
+  <div class="row text-center m-5">
     <h3>Top Braggers!</h3>
   </div>
 
@@ -7,18 +7,18 @@
     <div class="col-lg-6">
       <%= form_with url: '/leaderboard', method: :get, remote: true do |f| %>
         <div class="row">
-          <h4>Filter Scores by ... </h4>
+          <h4 class="mb-3">Filter Scores by ... </h4>
           <div class="col-sm-3">
-             <%= button_to "City", "/leaderboard", class: 'btn btn-block btn-dark location-select', params: {geo_scope: 'city'}, method: :get%>
+             <%= button_to "City", "/leaderboard", class: 'btn col-12 btn-dark location-select', params: {geo_scope: 'city'}, method: :get%>
           </div>
           <div class="col-sm-3">
-            <%= button_to "State", "/leaderboard", class: 'btn btn-block btn-dark location-select', params: {geo_scope: 'state'}, method: :get%>
+            <%= button_to "State", "/leaderboard", class: 'btn col-12 btn-dark location-select', params: {geo_scope: 'state'}, method: :get%>
           </div>
           <div class="col-sm-3">
-            <%= button_to "Country", "/leaderboard", class: 'btn btn-block btn-dark location-select', params: {geo_scope: 'country'}, method: :get%>
+            <%= button_to "Country", "/leaderboard", class: 'btn col-12 btn-dark location-select', params: {geo_scope: 'country'}, method: :get%>
           </div>
           <div class="col-sm-3">
-            <%= button_to "World", "/leaderboard", class: 'btn btn-block btn-dark location-select', params: {geo_scope: 'world'}, method: :get%>
+            <%= button_to "World", "/leaderboard", class: 'btn col-12 btn-dark location-select', params: {geo_scope: 'world'}, method: :get%>
           </div>
         </div>
       <% end %>
