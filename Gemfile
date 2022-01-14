@@ -38,7 +38,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'faraday'
 gem 'omniauth'
 gem 'omniauth-twitter'
-gem 'bootstrap'
+gem 'bootstrap', '~> 5.1.3'
+gem 'jquery-rails'
 gem 'faraday-net_http'
 gem 'cgi'
 
