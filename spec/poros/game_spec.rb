@@ -15,9 +15,9 @@ RSpec.describe Game do
       answers: ['Answer 5', 'Answer 6', 'Answer 7', 'Answer 8']
     }
     @game = Game.new(questions: [
-      {attributes: @q1_data},
-      {attributes: @q2_data}
-    ])
+                       { attributes: @q1_data },
+                       { attributes: @q2_data }
+                     ])
   end
   it 'exists' do
     expect(@game).to be_a Game

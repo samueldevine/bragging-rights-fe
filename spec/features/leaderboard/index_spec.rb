@@ -6,7 +6,6 @@ RSpec.describe 'Leaderboard', type: :feature do
   end
 
   it 'has a leaderboard' do
-    
     expect(page).to have_content 'User'
     expect(page).to have_content 'Score'
   end

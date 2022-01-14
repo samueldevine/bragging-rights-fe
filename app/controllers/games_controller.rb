@@ -26,6 +26,7 @@ class GamesController < ApplicationController
     @scores = ScoresFacade.top_scores_by_location(params["geo_scope"], ip)
     if @scores
       if params["geo_scope"] == "city"
+        require 'pry'; binding.pry
         @location = @scores.first.city
       elsif params["geo_scope"] == "state"
         @location = @scores.first.state

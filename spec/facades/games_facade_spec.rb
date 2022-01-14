@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe GamesFacade do
   it 'creates a game made up of questions' do
-    user = User.create!(uid: 123456, nickname: 'chazsimons', access_token: '123')
+    user = User.create!(uid: 123_456, nickname: 'chazsimons',
+                        access_token: '123')
     game = GamesFacade.get_questions
 
     expect(game.length).to eq 5
