@@ -16,3 +16,8 @@ user_2 = User.create(
   nickname: 'floridaman',
   access_token: "1451281232570970119-rDbOK1dJrCA49v5TJ3p1HmQj7GRow2"
 )
+user_3 = User.create(
+  uid: '1479496123915988993',
+  nickname: 'floridaman',
+  access_token: "1451281232570970119-rDbOK1dJrCA49v5TJ3p1HmQj7GRow2"
+)

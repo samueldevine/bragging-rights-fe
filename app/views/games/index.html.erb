@@ -38,6 +38,7 @@
         <% if @scores %>
           <% @scores.each do |score| %>
           <tr>
+            <% require "pry"; binding.pry %>
             <td><%= User.find_by(uid: score.user_id).nickname %></td>
             <td><%= score.score %></td>
           </tr>
