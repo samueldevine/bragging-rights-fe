@@ -5,9 +5,7 @@ A Comic Trivia Challenge (2 week sprint)
 ### [Chaz Simons](https://github.com/chazsimons), [Sam Devine](https://github.com/samueldevine), [Matthew Kimball](https://github.com/mekimball), [Ted Staros](https://github.com/tstaros23) & [Christian Valesares](https://github.com/cvalesares)
 
 
-![Ruby](https://img.shields.io/badge/Ruby-v2.7.2-red)
-
-![Rails](https://img.shields.io/badge/Rails-v5.2.6-red)
+![Ruby](https://img.shields.io/badge/Ruby-v2.7.2-red) ![Rails](https://img.shields.io/badge/Rails-v5.2.6-red)
 ---
 
 ![Imgur](https://i.imgur.com/q7ICv3F.png)
