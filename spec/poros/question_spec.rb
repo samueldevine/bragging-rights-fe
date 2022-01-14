@@ -20,7 +20,8 @@ RSpec.describe Question do
     expect(@question.id).to eq 1
     expect(@question.question).to eq 'Question 1'
     expect(@question.correct_answer).to eq 'Answer 1'
-    expect(@question.answers).to eq ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4']
+    expect(@question.answers).to eq ['Answer 1', 'Answer 2', 'Answer 3',
+                                     'Answer 4']
   end
 
   it 'determines if an answer is correct' do

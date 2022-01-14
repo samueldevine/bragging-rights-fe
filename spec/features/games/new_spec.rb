@@ -1,16 +1,16 @@
 require 'rails_helper'
 
-RSpec.describe "New Game" do
+RSpec.describe 'New Game' do
   it 'displays first question' do
     visit games_new_path
 
     expect(current_path).to eq('/quiz')
-    expect(page).to have_content("Question 1")
-    expect(page).to have_content("Who is Batman?")
-    expect(page).to have_content("Barry Allen")
-    expect(page).to have_content("Bruce Wayne")
-    expect(page).to have_content("Tony Stark")
-    expect(page).to have_content("Clark Kent")
+    expect(page).to have_content('Question 1')
+    expect(page).to have_content('Who is Batman?')
+    expect(page).to have_content('Barry Allen')
+    expect(page).to have_content('Bruce Wayne')
+    expect(page).to have_content('Tony Stark')
+    expect(page).to have_content('Clark Kent')
   end
 
   # it 'can redirect to new question' do
