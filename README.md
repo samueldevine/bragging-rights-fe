@@ -31,7 +31,7 @@ Here's some gifs demoing our functionality:
 [Leaderboard](https://i.imgur.com/Qjl1xMB.gif)
 ** Find out how you stack up against people in your city, state, country, or world wide from the high scores page! **
 
-Take the quiz at [Bragging Rights!](https://shielded-anchorage-65791.herokuapp.com)
+Take the quiz at [Bragging Rights!](https://bragging-rights-quiz.herokuapp.com/)
 
 ## Tech Stack:
 - Rails 5.2.6
