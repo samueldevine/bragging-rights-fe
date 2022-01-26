@@ -2,12 +2,10 @@
 
 A Comic Trivia Challenge (2 week sprint)
 ----------------------------------------
-### Chaz Simons, Sam Devine, Matthew Kimball, Ted Staros & Christian Valesares
+### [Chaz Simons](https://github.com/chazsimons), [Sam Devine](https://github.com/samueldevine), [Matthew Kimball](https://github.com/mekimball), [Ted Staros](https://github.com/tstaros23) & [Christian Valesares](https://github.com/cvalesares)
 
 
-![Ruby](https://img.shields.io/badge/Ruby-v2.7.2-red)
-
-![Rails](https://img.shields.io/badge/Rails-v5.2.6-red)
+![Ruby](https://img.shields.io/badge/Ruby-v2.7.2-red) ![Rails](https://img.shields.io/badge/Rails-v5.2.6-red)
 ---
 
 ![Imgur](https://i.imgur.com/q7ICv3F.png)
@@ -16,19 +14,21 @@ A Comic Trivia Challenge (2 week sprint)
 
 "Bragging Rights" is a trivia competition app that lets you flex that knowledge! Find out how you rank against users from your city, state or country! Users log in with Twitter, and can tweet their scores to challenge friends. 
 
-[Imgur](https://i.imgur.com/egKoOFP.gif)
+Here's some gifs demoing our functionality:
+
+[Twitter Signin](https://i.imgur.com/egKoOFP.gif)
 ** Signing in with Twitter is fast, easy, and secure! **
 
-[Imgur](https://i.imgur.com/yKJW0f3.gif)
+[User Dashboard](https://i.imgur.com/yKJW0f3.gif)
 ** Your dashboard has your highest scores, and a place to tweet a challenge to your friends! **
 
-[Imgur](https://i.imgur.com/lBL7Awh.gif)
+[Answering Questions](https://i.imgur.com/lBL7Awh.gif)
 ** Choose the right answer, but don't take too long! Time is a factor in your score. **
 
-[Imgur](https://i.imgur.com/NtZadQV.gif)
+[Final Score](https://i.imgur.com/NtZadQV.gif)
 ** When you've finish the game, go ahead and get your brag on. We won't tell anyone. **
 
-[Imgur](https://i.imgur.com/Qjl1xMB.gif)
+[Leaderboard](https://i.imgur.com/Qjl1xMB.gif)
 ** Find out how you stack up against people in your city, state, country, or world wide from the high scores page! **
 
 Take the quiz at [Bragging Rights!](https://shielded-anchorage-65791.herokuapp.com)
