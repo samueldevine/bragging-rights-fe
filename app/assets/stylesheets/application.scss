@@ -17,7 +17,8 @@
 body  {
   background-image: url('4806311.jpeg');
   background-size: cover;
-  background-repeat: repeat;
+  height: 100vh;
+  background-repeat: no-repeat;
   background-color: #cccccc;
   padding-bottom: 70px;
 }
@@ -137,3 +138,8 @@ tr:nth-child(odd) {
   height: 100%;
   vertical-align: middle;
 }
+
+// .body {
+//   width: auto;
+//   height: auto;
+// }
