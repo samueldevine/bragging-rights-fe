@@ -16,10 +16,9 @@
 
 body  {
   background-image: url('4806311.jpeg');
+  background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-color: #cccccc;
-  padding-bottom: 70px;
+  background-attachment: fixed;
 }
 
 footer {
@@ -89,6 +88,17 @@ tr:nth-child(odd) {
   font-weight: bold;
 }
 
+.welcome {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 100px;
+  padding: 40vh;
+  align-items:center;
+  justify-content:center;
+  align-content: space-around;
+}
+
 .location-select {
   font-size: 1vw;
 }
@@ -136,4 +146,14 @@ tr:nth-child(odd) {
   display: inline-block;
   height: 100%;
   vertical-align: middle;
+}
+
+.flash {
+  color: white;
+  text-shadow: 10px 10px 15px #000000;
+  font-family: "Marker Felt";
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2vw;
+  text-align: center;
 }
