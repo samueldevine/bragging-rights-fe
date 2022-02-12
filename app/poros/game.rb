@@ -18,4 +18,18 @@ class Game
   def avg_time
     @time / @questions_answered
   end
+
+  def formatted_time
+    mins = (@time / 60)
+    secs =  @time % 60
+    "#{mins} minute(s) & #{secs} seconds"
+  end
+
+  def final_score
+    if @score < 0
+      @score = 0
+    else
+      @score
+    end
+  end
 end

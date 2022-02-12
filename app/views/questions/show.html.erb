@@ -9,7 +9,7 @@
   <%= form_with url: '/quiz', method: :get, remote: true do |f| %>
     <% @question[:q]['answers'].each do |answer| %>
       <div class='row answer'>
-        <%= f.submit "#{answer}", class: 'btn-block' %>
+        <%= f.submit "#{answer}", class: 'rounded-pill' %>
       </div>
     <% end %>
   <% end %>

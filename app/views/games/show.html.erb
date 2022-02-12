@@ -7,10 +7,10 @@
 
   <div class='row text-center'>
     <div class='col-lg-6 mx-auto bg-dark p-2'>
-      <h2 class="score"><%= @game.score %></h2>
+      <h2 class="score"><%= @game.final_score %></h2>
       <div class ="stats">
         <p>Correct Answers: <b><%= @game.correct_answers %></b> of 5</p>
-        <p>Your time: <b><%= @game.time %></b> seconds</p>
+        <p>Your Time: <b><%= @game.formatted_time %></b></p>
         <p>Average time per question: <b><%= @game.avg_time %></b> seconds</p>
       </div>
     </div>
@@ -19,7 +19,7 @@
   <div class='row text-center'>
     <div class='col-lg-6 mx-auto stats bg-dark p-2'>
       <h4>Brag about this score! </h4>
-      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="BOOM! <%= @game.score %> points on #BraggingRights! To be the best, you got beat the rest!" data-url="https://shielded-anchorage-65791.herokuapp.com" data-hashtags="IveGotBraggingRights #CanYouTopThisScore" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="BOOM! <%= @game.score %> points on #BraggingRights! To be the best, you got to beat the rest!" data-url="https://braggingrightsquiz.com" data-hashtags="IveGotBraggingRights #CanYouTopThisScore" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
   </div>
   <div class='row text-center'>
